@@ -114,6 +114,10 @@ c:NewButton("Infiniteyield","???",function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+c:NewButton("Keyboard","???",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
 c:NewButton("Tao Hu Hub Paid","???",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Zuwyy/Whitelist/main/Whitelist"))()
 end)
