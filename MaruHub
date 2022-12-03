@@ -79,6 +79,11 @@ b:NewButton("Funky Inf Score","Key: OHIO",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Balligusapos/Balligusapos/main/video.mp4"))()
 end)
 
+b:NewButton("ProPieceProMax","???",function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/ProPiecePro'),true))()
+end)
+
+
 c:NewButton("InfJump","LoL",function()
 local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
