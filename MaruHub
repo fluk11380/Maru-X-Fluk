@@ -1,34 +1,102 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	Title = "IGNITE SV X",  	
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-Text = "Maru Hub",
+local Win1 = DiscordLib:Window("CverX") -- Title/Name
 
-})
+local Tab1 = Win1:Server("IGNITESVX", "") -- Server/Tab
 
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+local a = Tab1:Channel("Main") -- Channel
 
-Title = "รอ10วิ",  	
+local b = Tab1:Channel("Other")
 
-Text = "ได้ละ",
+local c = Tab1:Channel("Credits")
 
-})
+---TabA
 
-wait(10)
-
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-
-Title = "GetScriptNow",  	
-
-Text = "GetScript",
-
-})
-
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local Window = Library.CreateLib("IGNITE-SV-X | คัดลอกแล้วใส่ในGoogle","DarkTheme")
-
-
-local Tab = Window:NewTab("Main")
-local a = Tab:NewSection("Main")
-
-a:NewButton("GetScript","GetScript",function()
-setclipboard("https://rekonise.com/getscript-4qzer")
+a:Button("MaruHubNormal", function()
+getgenv().Key = "MARU-RGWU6-X1MNS-4DLQM-2TIWP"
+getgenv().id = "804895822796947498"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
 end)
+
+a:Seperator() -- Keep This If You Want To
+
+a:Button("MaruHubThai(BF)", function()
+getgenv().Key = "MARU-RGWU6-X1MNS-4DLQM-2TIWP"
+getgenv().id = "804895822796947498"
+_G.Script_Language = "Thai"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
+
+a:Seperator()
+
+a:Button("MaruHubPvP(BF)", function()
+getgenv().Key = "MARU-RGWU6-X1MNS-4DLQM-2TIWP"
+getgenv().id = "804895822796947498"
+_G.Script_Mode = "PVP"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
+
+a:Seperator()
+
+a:Button("MaruHubKaitun(BF)", function()
+getgenv().Key = "MARU-RGWU6-X1MNS-4DLQM-2TIWP"
+getgenv().id = "804895822796947498"
+getgenv().Script_Mode = "Kaitun_Script"
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"), true))()
+end)
+
+---TabB
+
+b:Button("Fixlag", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/1dXmmH9Y"))()
+end)
+
+b:Seperator()
+
+b:Button("Infjump", function()
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+b:Seperator()
+
+b:Button("HitBox", function()
+_G.HeadSize = 20 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.HumanoidRootPart.Transparency = 0.7 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue") v.Character.HumanoidRootPart.Material = "Neon" v.Character.HumanoidRootPart.CanCollide = false end) end end end end)
+end)
+
+b:Seperator()
+
+b:Button("EspBox", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fluk11380/Esp/main/ESP"))()
+end)
+
+b:Seperator()
+
+b:Button("Fly Gui", function()
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+b:Seperator()
+
+b:Button("FixlCam", function()
+loadstring("\103\97\109\101\58\71\101\116\83\101\114\118\105\99\101\40\34\83\116\97\114\116\101\114\71\117\105\34\41\58\83\101\116\67\111\114\101\40\34\83\101\110\100\78\111\116\105\102\105\99\97\116\105\111\110\34\44\123\10\32\32\32\32\84\105\116\108\101\32\61\32\34\84\121\112\105\99\97\108\32\67\111\111\108\107\105\100\34\59\10\32\32\32\32\84\101\120\116\32\61\32\34\70\105\120\99\97\109\32\83\99\114\105\112\116\32\83\117\98\115\99\114\105\98\101\32\102\111\114\32\109\111\114\101\33\59\32\34\59\10\32\32\32\32\68\117\114\97\116\105\111\110\32\61\32\54\48\59\10\125\41\32\32\10\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\104\97\114\105\115\112\114\111\102\97\110\110\121\47\100\47\109\97\105\110\47\102\105\120\99\97\109\46\116\120\116\34\41\41\40\41\10")()
+end)
+
+local sldr = b:Slider("SpeedPower",0,1000,400, function(s)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+b:Seperator()
+
+local sldr = b:Slider("JumpPower", 0, 1000, 400, function(s) -- A Slider
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = s 
+end)
+
+---TabC
+
+c:Label("Made By CverXfluk") 
+
